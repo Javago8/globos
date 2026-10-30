@@ -1,14 +1,16 @@
 
 class Globo
 {
-  float x, y,vx,vy;
+  float x, y,vx,vy, r,g,b;
   Globo (float _x, float _y)
   {
    x=_x;
    y=_y; 
    vx=random(-0.25,0.25);
    vy=random(-2,-0.5);
-  }
+    r = random(0, 255);
+   g = random(0, 255);
+   b = random(0, 255);  }
 
   void update()
   {
@@ -18,6 +20,7 @@ class Globo
 
   void dibujate()
   {
+      fill(r,g,b);
       rectMode(CENTER);
       rect(x,y,80,100);
       imageMode(CENTER);
